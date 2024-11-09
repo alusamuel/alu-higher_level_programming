@@ -40,7 +40,7 @@ class Square:
         return self.area() < other.area()
 
     def __le__(self, other):
-        """Check if this square is smaller or equal to another based on area."""
+        """Check if this square is smaller or equal."""
         return self.area() <= other.area()
 
     def __gt__(self, other):
