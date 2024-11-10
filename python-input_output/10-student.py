@@ -12,4 +12,4 @@ class Student:
 
     def to_json(self, attrs=None):
         """Returns selected attributes as a dictionary if `attrs` is given."""
-        return {k: self.__dict__[k] for k in (attrs or self.__dict__)}
+        return {k: v for k, v in self.__dict__.items() if not attrs or k in attrs}
