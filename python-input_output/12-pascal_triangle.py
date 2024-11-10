@@ -1,7 +1,16 @@
 #!/usr/bin/python3
+"""
+Module for generating Pascal's triangle.
+"""
 
 
 def pascal_triangle(n):
+    """
+    Generates Pascal's triangle up to the nth row.
+
+    Args:
+        n (int): Number of rows in the triangle.
+    """
     if n <= 0:
         return []
 
