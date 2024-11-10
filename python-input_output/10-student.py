@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-Student class with a method to return selected attributes as a dictionary.
-"""
+"""Student class with a method to return selected attributes as a dictionary."""
 
 
 class Student:
