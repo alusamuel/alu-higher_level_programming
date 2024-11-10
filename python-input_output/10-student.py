@@ -2,6 +2,7 @@
 """ Module that make student class """
 
 
+
 class Student:
     def __init__(self, first_name, last_name, age):
        """Initializes a student instance."""
