@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module that defines a Student class."""
 
+
 class Student:
     """Represents a student with first name, last name, and age."""
 
@@ -11,5 +12,10 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        """Returns selected attributes as a dictionary if `attrs` is given."""
-        return {k: v for k, v in self.__dict__.items() if not attrs or k in attrs}
+        """
+        Returns a dictionary of the instance's attributes.
+        If `attrs` is provided as a list, only returns those attributes.
+        """
+        if attrs is None or not isinstance(attrs, list):
+            return self.__dict__
+        return {k: v for k, v in self.__dict__.items() if k in attrs}
