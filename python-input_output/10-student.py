@@ -3,8 +3,6 @@
 
 
 class Student:
-    """Represents a student with first name, last name, and age."""
-
     def __init__(self, first_name, last_name, age):
        """Initializes a student instance."""
         self.first_name = first_name
