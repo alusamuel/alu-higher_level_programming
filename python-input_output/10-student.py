@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 """
-Module defining a Student class.
+Module defining the Student class.
+The Student class provides methods for initializing a student object
+and converting the object’s attributes to a dictionary.
 """
-
 
 class Student:
     """
