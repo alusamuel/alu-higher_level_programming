@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
 Module defining a Student class.
-The Student class includes attributes and methods for student representation.
 """
 
 
