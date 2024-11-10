@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""Student class with a method to return selected attributes as a dictionary."""
+"""
+Module defining a Student class.
+The Student class includes attributes and methods for student representation.
+"""
 
 
 class Student:
