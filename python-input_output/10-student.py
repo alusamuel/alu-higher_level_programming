@@ -1,13 +1,10 @@
 #!/usr/bin/python3
-
-"""Module defining the Student class.
-"""
+"""Module defining the Student class."""
 
 
 class Student:
-    """
-    Represents a student with first name, last name, and age.
-    """
+    """Represents a student with first name, last name, and age."""
+
     def __init__(self, first_name, last_name, age):
        """Initializes a student instance."""
         self.first_name = first_name
