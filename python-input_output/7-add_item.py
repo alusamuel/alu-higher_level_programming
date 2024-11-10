@@ -10,7 +10,7 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 filename = "add_item.json"
 
-# Load the existing list from the file if it exists; otherwise, start with an empty list
+# Load the existing list from the file if it exists;
 try:
     items = load_from_json_file(filename)
 except FileNotFoundError:
