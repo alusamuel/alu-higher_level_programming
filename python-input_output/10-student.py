@@ -10,10 +10,7 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        """
-        Returns the student's attributes as a dictionary.
-        If `attrs` is given, only those attributes are returned.
-        """
+        """Returns the student's attributes as a dictionary."""
         if attrs is None:
             return self.__dict__
         else:
