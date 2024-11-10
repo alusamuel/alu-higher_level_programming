@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" Module that make student class """
 
 
 class Student:
