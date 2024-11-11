@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-"""Reads stdin line by line, computes and prints metrics every 10 lines or on interrupt."""
+"""Reads stdin line by line, computes and prints metrics every 10 lines."""
 
 import sys
+
 
 def print_stats(total_size, status_counts):
     """Prints file size and counts of status codes in ascending order."""
