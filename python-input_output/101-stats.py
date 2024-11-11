@@ -12,7 +12,7 @@ def print_stats(total_size, status_counts):
             print(f"{code}: {status_counts[code]}")
 
 total_size = 0
-status_counts = {200: 0, 301: 0, 400: 0, 401: 0, 403: 0, 404: 0, 405: 0, 500: 0}
+status_counts = {code: 0 for code in [200, 301, 400, 401, 403, 404, 405, 500]}
 line_count = 0
 
 try:
