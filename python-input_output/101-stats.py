@@ -47,6 +47,3 @@ finally:
     # Print final stats on exit (including if there were fewer than 10 lines)
     if line_count > 0:
         print_stats(total_size, status_counts)
-        for code in sorted(status_counts):
-            if status_counts[code] > 0:
-                print(f"{code}: {status_counts[code]}")
