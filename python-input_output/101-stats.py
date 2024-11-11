@@ -43,5 +43,6 @@ except KeyboardInterrupt:
     pass
 
 finally:
-    # Print final stats on exit
-    print_stats(total_size, status_counts)
+    # Print final stats on exit (including if there were fewer than 10 lines)
+    if line_count > 0:
+        print_stats(total_size, status_counts)
