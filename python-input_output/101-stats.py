@@ -1,16 +1,16 @@
 #!/usr/bin/python3
-"""Reads from stdin, computes and prints metrics every 10 lines."""
+"""Reads stdin line by line, computes and prints metrics every 10 lines or on interrupt."""
 
 import sys
 
-def print_stats(file_size, status_counts):
-    """Prints accumulated file size and status code counts in sorted order."""
-    print(f"File size: {file_size}")
+def print_stats(total_size, status_counts):
+    """Prints file size and counts of status codes in ascending order."""
+    print(f"File size: {total_size}")
     for code in sorted(status_counts):
         if status_counts[code] > 0:
             print(f"{code}: {status_counts[code]}")
 
-file_size = 0
+total_size = 0
 status_counts = {200: 0, 301: 0, 400: 0, 401: 0, 403: 0, 404: 0, 405: 0, 500: 0}
 line_count = 0
 
@@ -20,13 +20,13 @@ try:
         if len(parts) < 2:
             continue
 
-        # Update file size
+        # Update total file size
         try:
-            file_size += int(parts[-1])
+            total_size += int(parts[-1])
         except ValueError:
             continue
 
-        # Update status code count if it exists in the dictionary
+        # Update status code count if valid
         try:
             status_code = int(parts[-2])
             if status_code in status_counts:
@@ -34,14 +34,14 @@ try:
         except ValueError:
             continue
 
-        # Increment line count and print stats every 10 lines
+        # Print stats every 10 lines
         line_count += 1
         if line_count % 10 == 0:
-            print_stats(file_size, status_counts)
+            print_stats(total_size, status_counts)
 
 except KeyboardInterrupt:
     pass
 
 finally:
-    # Print final stats
-    print_stats(file_size, status_counts)
+    # Print final stats on exit
+    print_stats(total_size, status_counts)
