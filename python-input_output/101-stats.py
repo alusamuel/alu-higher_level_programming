@@ -44,6 +44,9 @@ except KeyboardInterrupt:
     pass
 
 finally:
-    # Print final stats on exit (including if there were fewer than 10 lines)
-    if line_count > 0:
+    # Handle the empty file case
+    if line_count == 0:
+        print("File size: 0")
+    else:
+        # Print final stats on exit
         print_stats(total_size, status_counts)
